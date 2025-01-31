@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listar Pessoas</title>
+</head>
+<body>
+    <h1>Lista de Pessoas</h1>
+    <ul>
+        {% for pessoa in pessoas %}
+            <li>{{ pessoa.nome }} - {{ pessoa.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'criar_pessoa' %}">Criar Nova Pessoa</a>
+</body>
+</html>

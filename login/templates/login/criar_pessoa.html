@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Pessoa</title>
+</head>
+<body>
+    <h1>Criar Nova Pessoa</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>Username já em uso: {{ existing_usernames|join:", " }}</p>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
